@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ko"></html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, ser-scalable=no">
     <link rel="stylesheet" href="./styles/index.css"> 
     <title>JS PWA</title>
     <!--내부 자바스크립트-->
@@ -28,16 +28,17 @@
         -->
         <main id="content">
             <section id="bt">
-                <button class="bt1" onclick="funPrint(1);">버튼1</button>
-                <button class="bt1" onclick="funPrint(2);">버튼2</button>
+                <button class="bt1" onclick="funPrint(1);"><span>버튼1</span></button>
+                <button class="bt1" onclick="funPrint(2);"><span>버튼2</span></button>
             </section>
         </main>
     </div>
-    <!--스크립트 위치3-돔 컨트롤 하기 편하다.
+    <!-- 스크립트 위치3-돔 컨트롤 하기 편하다. 
     <script>
         alert("HelloWorld");
+        console.log(document.getElementById("bt"))
         // console.log("HelloWorld");
     </script>
-    -->
+   -->
 </body>
 </html>
