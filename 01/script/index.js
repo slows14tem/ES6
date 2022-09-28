@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // 요소 생성(버튼생성)
     // let bt = document.createElement("button")
     // document.getElementById("bt").append(bt)
+    // bt.innerHTML = "버튼3"
+    // document.getElementsByClassName(".bt1").append(bt)   //안됨
     
     //요소 찾기
     //결과 HTMLcollection

@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, ser-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/index.css"> 
     <title>JS PWA</title>
     <!--내부 자바스크립트-->
@@ -13,7 +16,8 @@
     </script>
     -->
     <!--외부 자바스크립트-->
-    <script src="./script/index.js"></script>
+    <!-- <script src="./script/index.js"></script> -->
+    <script src="./script/dom.js"></script>
 </head>
 <body>
     <div id="root">
@@ -27,9 +31,33 @@
         </script>
         -->
         <main id="content">
+            <!--주사위-->
+            <section id="msg"></section>
+            <!--ox-->
+            <section id="msgWR"></section>
+            <!--번호 선택-->
+            <section id="choiceNum">
+                <div>
+                    <p>번호선택</p>
+                </div>    
+                <form>                                    
+                    <input type="radio" id="1" name="Cnt" value="1">
+                    <label for="1">1번</label>
+                    <input type="radio" id="2" name="Cnt" value="2">
+                    <label for="2">2번</label>
+                    <input type="radio" id="3" name="Cnt" value="3">
+                    <label for="3">3번</label>
+                    <input type="radio" id="4" name="Cnt" value="4">
+                    <label for="3">4번</label>
+                    <input type="radio" id="5" name="Cnt" value="5">
+                    <label for="3">5번</label>
+                    <input type="radio" id="6" name="Cnt" value="6">
+                    <label for="3">6번</label>                  
+                </form>
+            </section>
             <section id="bt">
-                <button class="bt1" onclick="funPrint(1);"><span>버튼1</span></button>
-                <button class="bt1" onclick="funPrint(2);"><span>버튼2</span></button>
+                <button class="bt1" onclick="show();">주사위</button>
+                <button class="bt2" onclick="dice();">확인</button>
             </section>
         </main>
     </div>
