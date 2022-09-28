@@ -39,6 +39,13 @@
 
 
 // 주사위 프로젝트
+document.addEventListener("DOMContentLoaded", () => {
+    const choiceNum = document.querySelector("#choiceNum");
+    choiceNum.style.display = "none"
+    const but2 = document.querySelector(".bt2");
+    but2.style.display = "none"
+})
+
 const show = () => {
     const msgId = document.querySelector("#msg");
     msgId.style.display = "none"
@@ -67,23 +74,11 @@ const dice = () => {
     let tag = `<div class="msgDiv"><img src="./images/${ranCnt}.png" id="img${ranCnt}"></div>`;
     msgId.innerHTML = tag;
     
-    const diceNodeList = document.getElementsByName("Cnt");
-    diceNodeList.forEach((node) => {
-        if(node.checked)  {
-            // choiceNum.innerHTML = `'<div>${node.value}</div>'`
-            if(ranCnt == node.value) {
-                oxImg.innerHTML = '<div><img src="./images/o.png"></div>'
-            }
-            else {
-                oxImg.innerHTML = '<div><img src="./images/x.png"></div>'
-            }
-        }
-    })   
+    // const diceNodeList = document.querySelector('input[name="Cnt"]').checked; // 체크 여부
+    const diceValue = document.querySelector('input[name="Cnt"]:checked').value;  // 체크 값
+    if(diceValue == ranCnt) {
+        oxImg.innerHTML = '<div><img src="./images/o.png"></div>'
+    } else {
+        oxImg.innerHTML = '<div><img src="./images/x.png"></div>'
+    } 
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const choiceNum = document.querySelector("#choiceNum");
-    choiceNum.style.display = "none"
-    const but2 = document.querySelector(".bt2");
-    but2.style.display = "none"
-})
