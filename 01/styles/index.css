@@ -72,6 +72,6 @@ input[type=radio] + label {
 }
 input[type=radio]:checked + label {
     /* background-image: none; */
-    background-color: #3598dc;
+    background-color: #6750a4;
     color: white;
 }
