@@ -66,12 +66,15 @@ const show = () => {
     // section on->off
     dispDom("none", "none", "block", "none", "block")
     // 버튼 true -> false
-    let diceCheck = document.getElementsByName("Cnt");
-    for(let i=0;i<diceCheck.length;i++){
-        if(diceCheck[i].checked){
-            diceCheck[i].checked = false;
-        }
-    }    
+    // let diceCheck = document.getElementsByName("Cnt");
+    // for(let i=0;i<diceCheck.length;i++){
+    //     if(diceCheck[i].checked){
+    //         diceCheck[i].checked = false;
+    //     }
+    // }
+    //버튼을 직접 끌 필요 없이 폼을 리셋시킬 수 있다.
+    const form1 = document.getElementById("form1") ;
+    form1.reset() ;
 }
 
 const dice = () => {
