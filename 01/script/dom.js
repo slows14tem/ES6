@@ -6,7 +6,7 @@
 //화살표 함수에 명령이 한줄만 있을 때는 {} 생략 가능
 // const show = () => console.log("show")
 //return문 하나일때는 "return"도 생략 가능
-// const show = () => 10;
+// ex) const show = () => 10;
 
 //화살표 함수형식으로 생성
 // const show = () => {
@@ -57,9 +57,24 @@ const show = () => {
     but1.style.display = "none"
     const but2 = document.querySelector(".bt2");
     but2.style.display = "block"
+    // const diceValue = document.querySelector('input[name="Cnt"]:checked').value;
+    // let dicecheck = document.querySelector('input[name="Cnt"]').checked;
+    // let diceValue = document.querySelector('input[type="radio"][name="Cnt"]:checked');
+    // console.log(diceValue);
+    // if (diceValue.checked = true || diceValue == "null") {
+    //     diceValue.checked = false;
+    // }
+    let diceCheck = document.getElementsByName("Cnt");
+    for(let i=0;i<diceCheck.length;i++){
+        if(diceCheck[i].checked){
+            diceCheck[i].checked = false;
+        }
+    }
+    
 }
 
 const dice = () => {
+
     const msgId = document.querySelector("#msg");
     msgId.style.display = "block"
     const oxImg = document.querySelector("#msgWR");
@@ -70,15 +85,19 @@ const dice = () => {
     but1.style.display = "block"
     const but2 = document.querySelector(".bt2");
     but2.style.display = "none"
+
     let ranCnt = Math.floor(Math.random() * 6) + 1;
     let tag = `<div class="msgDiv"><img src="./images/${ranCnt}.png" id="img${ranCnt}"></div>`;
     msgId.innerHTML = tag;
     
-    // const diceNodeList = document.querySelector('input[name="Cnt"]').checked; // 체크 여부
+    // const diceCheck = document.querySelector('input[name="Cnt"]').checked; // 체크 여부
     const diceValue = document.querySelector('input[name="Cnt"]:checked').value;  // 체크 값
     if(diceValue == ranCnt) {
         oxImg.innerHTML = '<div><img src="./images/o.png"></div>'
     } else {
         oxImg.innerHTML = '<div><img src="./images/x.png"></div>'
-    } 
+    }
+
+    console.log(ranCnt);
+    console.log(diceValue);
 }
