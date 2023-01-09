@@ -1,3 +1,5 @@
+//자바 스크립트 연습
+
 /* 기존 함수 선언 방식
 function funPrint(n) {
     console.log(n);

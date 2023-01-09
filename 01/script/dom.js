@@ -1,3 +1,6 @@
+// 주사위 게임 프로젝트
+
+
 //function 키워드로 함수 생성
 // function show(){
 //     console.log("show");
@@ -44,7 +47,7 @@
 // const but1 = document.querySelector(".bt1");
 // const but2 = document.querySelector(".bt2");
 
-// 화면보기 함수
+// 화면보기 함수(필요한 화면만 온오프하기 위해서 미리 모아 놓은것)
 const dispDom = (msgIds, oxImgs, choices,  but1s, but2s) => {
     document.querySelector("#msg").style.display = msgIds
     document.querySelector("#msgWR").style.display = oxImgs
@@ -53,7 +56,6 @@ const dispDom = (msgIds, oxImgs, choices,  but1s, but2s) => {
     document.querySelector(".bt2").style.display = but2s
 }
 
-// 주사위 프로젝트
 document.addEventListener("DOMContentLoaded", () => {
     // section on->off
     dispDom("none", "none", "none", "block", "none")
